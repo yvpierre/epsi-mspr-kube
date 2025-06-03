@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" />
+  <title>COFRAP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>COFRAP</h1>
+
+    <section id="login">
+      <h2>Connexion</h2>
+      <input type="email" id="login-email" placeholder="Adresse mail">
+      <input type="password" id="login-password" placeholder="Mot de passe">
+      <a href="#">Mot de passe oublié ?</a>
+      <button class="main-button" onclick="loginUser()">Se connecter</button>
+      <button class="second-button" onclick="showSection('register')">Inscription</button>
+      <div id="login-result"></div>
+    </section>
+    <section id="register" style="display:none;">
+      <h2>Inscription</h2>
+      <input type="email" id="register-email" placeholder="Email">
+      <input type="password" id="register-password" placeholder="Mot de passe">
+      <button onclick="registerUser()">S'inscrire</button>
+      <button onclick="showSection('login')">Connexion</button>
+      <div id="register-result">
+
+        <h2>Votre QR Code</h2>
+        <img id="qrcode-img" src="" alt="QR Code 2FA" />
+
+      </div>
+    </section>
+      
+      
+      
+      <script src="app.js"></script>
+    </div>
+</body>
+</html>
